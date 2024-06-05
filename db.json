@@ -2,19 +2,19 @@
     "products": [
         {
             "id": 1,
-            "nome": "Arroz Tio João",
+            "nome": "Arroz",
             "disponivel": true,
             "quantidade": 30
         },
         {
             "id": 2,
-            "nome": "Café Maratá",
+            "nome": "Café",
             "disponivel": true,
             "quantidade": 20
         },
         {
             "id": 3,
-            "nome": "Tv Philips Plasma",
+            "nome": "Tv de Plasma 4k",
             "disponivel": true,
             "quantidade": 10
         },
@@ -23,6 +23,24 @@
             "nome": "Massa de Lasanha",
             "disponivel": true,
             "quantidade": 9
+        },
+        {
+            "id": 5,
+            "nome": "Leite",
+            "disponivel": true,
+            "quantidade": 90
+        },
+        {
+            "id": 6,
+            "nome": "Feijão",
+            "disponivel": true,
+            "quantidade": 9
+        },
+        {
+            "id": 7,
+            "nome": "Bicicleta",
+            "disponivel": true,
+            "quantidade": 89
         }
     ]
 }
