@@ -8,9 +8,21 @@ const props = defineProps<{
   valid: boolean
 }>();
 
+// const loginFields = ref({
+//   email: props.email,
+//   password: props.password,
+//   valid: props.valid
+// });
+
 const emailLocal = ref(props.email);
 const passwordLocal = ref(props.password);
 const validLocal = ref(props.valid);
+
+// watchEffect(() => {
+//   loginFields.value.email = props.email,
+//   loginFields.value.password = props.password,
+//   loginFields.value.valid = props.valid
+// });
 
 watchEffect(() => {
   emailLocal.value = props.email;
