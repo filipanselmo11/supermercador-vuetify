@@ -6,15 +6,19 @@ import { onMounted } from 'vue';
 
 const productStore = useProductStore();
 onMounted(() => {
-  console.log('OLÁ');
   productStore.getProducts();
 });
-const headers = ['id', 'nome', 'disponivel', 'quantidade'];
+const headers = ['Id', 'Nome', 'Disponível', 'Quantidade', 'Preço(R$)'];
 </script>
 
 <template>
-  <div class="d-flex justify-center mt-15">
-    <Progress v-if="productStore.loading"/>
-    <DataTable v-else :headers="headers.value" :items="productStore.products"/>
-  </div>
+  <section>
+    <div class="d-flex justify-center mt-15">
+      <h2 class="text-h2">Produtos</h2>
+    </div>
+    <div class="d-flex justify-center">
+      <Progress v-if="productStore.loading" />
+      <DataTable v-else :headers="headers.value" :items="productStore.products" />
+    </div>
+  </section>
 </template>

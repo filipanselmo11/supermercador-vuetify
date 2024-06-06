@@ -4,43 +4,100 @@
             "id": 1,
             "nome": "Arroz",
             "disponivel": true,
-            "quantidade": 30
+            "quantidade": 30,
+            "preco_unitario": "R$ 3,00"
         },
         {
             "id": 2,
             "nome": "Café",
             "disponivel": true,
-            "quantidade": 20
+            "quantidade": 20,
+            "preco_unitario": "R$ 2,50"
         },
         {
             "id": 3,
             "nome": "Tv de Plasma 4k",
             "disponivel": true,
-            "quantidade": 10
+            "quantidade": 10,
+            "preco_unitario": "R$ 900"
         },
         {
             "id": 4,
             "nome": "Massa de Lasanha",
             "disponivel": true,
-            "quantidade": 9
+            "quantidade": 9,
+            "preco_unitario": "R$ 3,40"
         },
         {
             "id": 5,
             "nome": "Leite",
             "disponivel": true,
-            "quantidade": 90
+            "quantidade": 90,
+            "preco_unitario": "R$ 2,20"
         },
         {
             "id": 6,
             "nome": "Feijão",
             "disponivel": true,
-            "quantidade": 9
+            "quantidade": 9,
+            "preco_unitario": "R$ 4,00"
         },
         {
             "id": 7,
             "nome": "Bicicleta",
             "disponivel": true,
-            "quantidade": 89
+            "quantidade": 89,
+            "preco_unitario": "R$ 100"
+        },
+        {
+            "id": 8,
+            "nome": "Bolacha",
+            "disponivel": false,
+            "quantidade": 89,
+            "preco_unitario": "R$ 3,10"
+        },
+        {
+            "id": 9,
+            "nome": "Liquidificador",
+            "disponivel": false,
+            "quantidade": 89,
+            "preco_unitario": "R$ 29,00"
+        },
+        {
+            "id": 10,
+            "nome": "Geladeira",
+            "disponivel": false,
+            "quantidade": 9,
+            "preco_unitario": "R$ 1000"
+        },
+        {
+            "id": 11,
+            "nome": "Teclado",
+            "disponivel": true,
+            "quantidade": 89,
+            "preco_unitario": "R$ 40,00"
+        },
+        {
+            "id": 12,
+            "nome": "Alho",
+            "disponivel": true,
+            "quantidade": 11,
+            "preco_unitario": "R$ 2,50"
+        },
+        {
+            "id": 13,
+            "nome": "Tomate",
+            "disponivel": false,
+            "quantidade": 100,
+            "preco_unitario": "R$ 2,00"
+        },
+        {
+            "id": 14,
+            "nome": "Colher",
+            "disponivel": true,
+            "quantidade": 19,
+            "preco_unitario": "R$ 1,20"
         }
+        
     ]
 }

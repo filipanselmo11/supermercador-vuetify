@@ -13,7 +13,7 @@ const fazerCadastro = () => {
   // console.log('Nome ', nome.value);
   // console.log('Email ', email.value);
   // console.log('Password ', password.value);
-  router.push('');
+  router.go(-1);
 }
 
 </script>
