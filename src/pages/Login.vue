@@ -9,17 +9,7 @@ const password = ref('');
 const valid = ref(false);
 const router = useRouter();
 const fazerLogin = () => {
-  // console.log('Email: ', email.value);
-  // console.log('Password: ', password.value);
-  router.push('/dashboard')
-  // if (email.value !== '' && password.value !== '') {
-  //   valid.value = true;
-  //   router.push('dashboard');
-  // } else {
-  //   valid.value = false;
-  //   console.log('Por favor preencha os campos');
-  // }
-
+  router.push('/dashboard');
 }
 
 </script>
@@ -31,7 +21,7 @@ const fazerLogin = () => {
   <v-row no-gutters class="mt-12">
     <v-col>
       <Alert v-show="valid" text="por favor preencha os campos" title="Erro" type="error"></Alert>
-      <LoginForm v-model:valid="valid" v-model:email="email" v-model:password="password" @login="fazerLogin">
+      <LoginForm v-model:email="email" v-model:password="password" v-model:valid="valid" @login="fazerLogin">
       </LoginForm>
       <span class="d-flex justify-center">Não tem conta ? <a
           class="ml-3"

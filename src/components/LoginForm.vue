@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ref, watchEffect, defineProps, defineEmits } from 'vue';
 import TextField from './TextField.vue';
 import Button from './Button.vue';
 const props = defineProps<{
@@ -6,34 +7,58 @@ const props = defineProps<{
   password: string,
   valid: boolean
 }>();
+
+const emailLocal = ref(props.email);
+const passwordLocal = ref(props.password);
+const validLocal = ref(props.valid);
+
+watchEffect(() => {
+  emailLocal.value = props.email;
+});
+
+watchEffect(() => {
+  passwordLocal.value = props.password;
+});
+
+watchEffect(() => {
+  validLocal.value = props.valid;
+});
+
+
 const emit = defineEmits(['login', 'update:emailValue', 'update:passwordValue', 'update:validValue']);
 
-const updateEmailValue = (event) => {
-  emit('update:emailValue', event.target.value)
-}
+watchEffect(() => {
+  if (emailLocal.value !== props.email) {
+    emit('update:emailValue', emailLocal.value);
+  }
+});
 
-const updatePasswordValue = (event) => {
-  emit('update:passwordValue', event.target.value)
-}
+watchEffect(() => {
+  if (passwordLocal.value !== props.password) {
+    emit('update:passwordValue', passwordLocal.value);
+  }
+});
 
-const updateValidValue = (event) => {
-  emit('update:validValue', event.target.value)
-}
+watchEffect(() => {
+  if (validLocal.value !== props.valid) {
+    emit('update:validValue', emailLocal.value);
+  }
+});
+
 
 const realizarLogin = () => {
-  emit('login')
+  emit('login');
 }
 
 </script>
 
 <template>
-  <v-form :value="props.valid" @update:value="updateValidValue">
+  <v-form v-model="validLocal">
     <v-container>
       <v-row>
         <v-col cols="12">
           <TextField
-            :value="props.email"
-            @input="updateEmailValue"
+            v-model="emailLocal"
             label="Email"
             placeholder="fulano@email.com"
             type="email"
@@ -41,8 +66,7 @@ const realizarLogin = () => {
         </v-col>
         <v-col cols="12">
           <TextField
-            :value="props.password"
-            @input="updatePasswordValue"
+            v-model="passwordLocal"
             label="Senha"
             placeholder="*****"
             type="password" />
