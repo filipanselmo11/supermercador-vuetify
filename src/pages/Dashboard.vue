@@ -16,7 +16,7 @@ const headers = ['Id', 'Nome', 'Disponível', 'Quantidade', 'Preço(R$)'];
     <div class="d-flex justify-center mt-15">
       <h2 class="text-h2">Produtos</h2>
     </div>
-    <div class="d-flex justify-center">
+    <div class="d-flex justify-center mt-9">
       <Progress v-if="productStore.loading" />
       <DataTable v-else :headers="headers.value" :items="productStore.products" />
     </div>
