@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, watchEffect, defineProps, defineEmits } from 'vue';
+import { ref, watchEffect } from 'vue';
 import TextField from './TextField.vue';
 import Button from './Button.vue';
 const props = defineProps<{
